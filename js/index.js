@@ -24,11 +24,12 @@ fetch("https://striveschool-api.herokuapp.com/api/product/", {
                             <img src="${product.imageUrl}"class="card-img-top" style="width: 100%; height: 200px;">
                             <h5 class="card-title mt-2 fs-5 h-30">${product.brand}</h5>
                             <span class="badge bg-dark mt-1">Prezzo: € ${product.price}</span >
-                            <a href="dettaglio.html?id=" class=" btn btn-primary d-flex mt-2 p-2 ms-1 mx-1">Scopri di pìu</a>
-                            <a href="back-office.html?id=" class="btn btn-primary d-flex mt-1 p-2 ms-1 mx-1" onclick="click" id="modifica">Modifica</a>
+                            <a href="dettaglio.html?id=${product._id}" class=" btn btn-primary d-flex mt-2 p-2 ms-1 mx-1" id="btn1">Scopri di pìu</a>
+                            <a href="back-office.html?id=${product._id}" class="btn btn-primary d-flex mt-1 p-2 ms-1 mx-1" onclick="click" id="modifica">Modifica</a>
                         </div>
                     </div>
                         `
+
                     grid.appendChild(col)
                 })
             })
